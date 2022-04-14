@@ -1,51 +1,70 @@
-require('dotenv').config()
-var express = require('express');
-var app = express();
-var bodyParser = require('body-parser');
+require('dotenv').config();
 
 
-const reqLogger = (req, res, next) => {
-  console.log(`${req.method} ${req.path} - ${req.ip}`)
-  next();
-} 
+let Person;
 
-app.use(reqLogger);
-app.use(bodyParser.urlencoded({extended: false}));
-app.use('/public',express.static(__dirname + '/public'));
+const createAndSavePerson = (done) => {
+  done(null /*, data*/);
+};
 
-app.get('/', (req, res) => {
-  indexPath = __dirname + '/views/index.html';
-  res.sendFile(indexPath);
-});
+const createManyPeople = (arrayOfPeople, done) => {
+  done(null /*, data*/);
+};
 
-app.get('/json', (req, res) => {
-  if (process.env.MESSAGE_STYLE == "uppercase") {
-    res.json({"message" : "HELLO JSON"});
-  } else {
-    res.json({"message": "Hello json"});
-  }
-});
+const findPeopleByName = (personName, done) => {
+  done(null /*, data*/);
+};
 
-app.get('/now', (req, res, next) => {
-  req.time = new Date().toString();
-  next();
-}, (req, res) => {
-  res.json({"time": req.time});
-});
+const findOneByFood = (food, done) => {
+  done(null /*, data*/);
+};
 
-app.get('/:word/echo', (req, res) => {
-  res.json({"echo": req.params.word});
-});
+const findPersonById = (personId, done) => {
+  done(null /*, data*/);
+};
 
-const getName = (req, res) => {
-  res.json(req.body);
-}
+const findEditThenSave = (personId, done) => {
+  const foodToAdd = "hamburger";
 
-const postName = (req, res) => {
-  res.json({"name": `${req.body.first} ${req.body.last}`});
-}
+  done(null /*, data*/);
+};
 
-app.post('/name', postName);
-// app.route('/name').post(postName);
+const findAndUpdate = (personName, done) => {
+  const ageToSet = 20;
 
-module.exports = app;
+  done(null /*, data*/);
+};
+
+const removeById = (personId, done) => {
+  done(null /*, data*/);
+};
+
+const removeManyPeople = (done) => {
+  const nameToRemove = "Mary";
+
+  done(null /*, data*/);
+};
+
+const queryChain = (done) => {
+  const foodToSearch = "burrito";
+
+  done(null /*, data*/);
+};
+
+/** **Well Done !!**
+/* You completed these challenges, let's go celebrate !
+ */
+
+//----- **DO NOT EDIT BELOW THIS LINE** ----------------------------------
+
+exports.PersonModel = Person;
+exports.createAndSavePerson = createAndSavePerson;
+exports.findPeopleByName = findPeopleByName;
+exports.findOneByFood = findOneByFood;
+exports.findPersonById = findPersonById;
+exports.findEditThenSave = findEditThenSave;
+exports.findAndUpdate = findAndUpdate;
+exports.createManyPeople = createManyPeople;
+exports.removeById = removeById;
+exports.removeManyPeople = removeManyPeople;
+exports.queryChain = queryChain;
