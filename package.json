@@ -1,0 +1,20 @@
+{
+  "name": "freecodecamp-backend-exercise",
+  "version": "1.0.0",
+  "description": "My source code for : https://www.freecodecamp.org/learn/back-end-development-and-apis",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clairekuo0913/freeCodeCamp-backend-exercise.git"
+  },
+  "keywords": [],
+  "author": "Claire Kuo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clairekuo0913/freeCodeCamp-backend-exercise/issues"
+  },
+  "homepage": "https://github.com/clairekuo0913/freeCodeCamp-backend-exercise#readme"
+}
