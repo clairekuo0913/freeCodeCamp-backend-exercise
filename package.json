@@ -1,20 +1,15 @@
 {
-  "name": "freecodecamp-backend-exercise",
-  "version": "1.0.0",
-  "description": "My source code for : https://www.freecodecamp.org/learn/back-end-development-and-apis",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/clairekuo0913/freeCodeCamp-backend-exercise.git"
-  },
-  "keywords": [],
-  "author": "Claire Kuo",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/clairekuo0913/freeCodeCamp-backend-exercise/issues"
-  },
-  "homepage": "https://github.com/clairekuo0913/freeCodeCamp-backend-exercise#readme"
+	"name": "fcc-learn-node-with-express",
+	"version": "0.1.0",
+	"dependencies": {
+		"body-parser": "^1.20.0",
+		"cookie-parser": "^1.4.3",
+		"dotenv": "^16.0.0",
+		"express": "^4.14.0",
+		"fcc-express-bground": "https://github.com/freeCodeCamp/fcc-express-bground-pkg.git"
+	},
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js"
+	}
 }
